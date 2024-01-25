@@ -26,17 +26,17 @@ app.set('view engine', 'ejs')
 
 let count = 0
 
-app.get('/', async (req, res) => {
+app.get('/api', async (req, res) => {
     res.status(200).json({"message": `server is working [ count: ${++count} ]`})
 })
 
-app.use('/student', student)
-app.use('/newsfeed', newsFeed)
-app.use('/regulation', regulation)
-app.use('/notification', notification)
-app.use('/admin', admin)
-app.use('/payment', payment)
-app.use('/upload', fileUpload)
+app.use('/api/student', student)
+app.use('/api/newsfeed', newsFeed)
+app.use('/api/regulation', regulation)
+app.use('/api/notification', notification)
+app.use('/api/admin', admin)
+app.use('/api/payment', payment)
+app.use('/api/upload', fileUpload)
 
 mongoose.connect(MONGO)
     .then(() => {
