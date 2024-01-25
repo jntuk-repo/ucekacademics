@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer'
 
 const staticMessages = {
     register: function ({ name, token }) {
-        const host_url = 'http://ucekacademics.s3-website-us-east-1.amazonaws.com/activate?id='
+        const host_url = 'http://localhost:3000/activate?id='
         return `
             <div>
                 <h1>Greetings from UCEK ACADEMICS</h1>

@@ -10,6 +10,7 @@ import notification from "./routes/notification.js"
 import admin from "./routes/admin.js"
 import payment from "./routes/payment.js"
 import fileUpload from "./routes/upload.js"
+import path from "path"
 
 
 dotenv.config()
@@ -37,6 +38,12 @@ app.use('/api/notification', notification)
 app.use('/api/admin', admin)
 app.use('/api/payment', payment)
 app.use('/api/upload', fileUpload)
+
+const __dirname = path.resolve()
+app.use(express.static(path.join(__dirname, "/studentview/dist/my-projext")))
+app.get("*", (req, res) =>
+    res.sendFile(path.join(__dirname, "/studentview/dist/my-projext/index.html"))
+)
 
 mongoose.connect(MONGO)
     .then(() => {
