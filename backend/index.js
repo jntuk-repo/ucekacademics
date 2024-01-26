@@ -40,10 +40,12 @@ app.use('/api/payment', payment)
 app.use('/api/upload', fileUpload)
 
 const __dirname = path.resolve()
-app.use(express.static(path.join(__dirname, "/adminview/dist/my-projewt")))
-app.get("/admin/*", (req, res) =>
-    res.sendFile(path.join(__dirname, "/adminview/dist/my-projewt/index.html"))
-)
+
+// app.use(express.static(path.join(__dirname, "/adminview/dist/my-projewt")))
+// app.get("/admin/*", (req, res) =>
+//     res.sendFile(path.join(__dirname, "/adminview/dist/my-projewt/index.html"))
+// )
+
 app.use(express.static(path.join(__dirname, "/studentview/dist/my-projext")))
 app.get("*", (req, res) =>
     res.sendFile(path.join(__dirname, "/studentview/dist/my-projext/index.html"))

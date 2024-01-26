@@ -16,21 +16,21 @@ import { CertificateApplicationComponent } from './certificate-application/certi
 import { RevaluationApplicationsComponent } from './revaluation-applications/revaluation-applications.component';
 
 const routes: Routes = [
-	{ path: '', redirectTo: "/home", pathMatch: 'full' },
-	{ path: "home", component: HomeComponent },
-	{ path: "login", component: LoginComponent },
-	{ path: "profile", component: ProfileComponent },
-	{ path: "upload-notifications", component: NotificationsComponent },
-	{ path: "delete-notifications", component: DeleteNotificationComponent },
-	{ path: "update-regulation", component: UpdateRegulationComponent },
-	{ path: "upload-results", component: UploadResultsComponent },
-	{ path: "upload-results-csv", component: UploadResultsCsvComponent },
-	{ path: "upload-supplyresults", component: UploadSupplyResultsComponent },
-	{ path: "contact", component: ContactComponent },
-	{ path: "semester-application", component: SemesterApplicationComponent },
-	{ path: "semester-supply-application", component: SupplySemesterApplicationComponent },
-	{ path: "certificate-application", component: CertificateApplicationComponent },
-	{ path: "revaluation-applications", component: RevaluationApplicationsComponent }
+	{ path: "admin", redirectTo: "/admin/home", pathMatch: 'full' },
+	{ path: "admin/home", component: HomeComponent },
+	{ path: "admin/login", component: LoginComponent },
+	{ path: "admin/profile", component: ProfileComponent },
+	{ path: "admin/upload-notifications", component: NotificationsComponent },
+	{ path: "admin/delete-notifications", component: DeleteNotificationComponent },
+	{ path: "admin/update-regulation", component: UpdateRegulationComponent },
+	{ path: "admin/upload-results", component: UploadResultsComponent },
+	{ path: "admin/upload-results-csv", component: UploadResultsCsvComponent },
+	{ path: "admin/upload-supplyresults", component: UploadSupplyResultsComponent },
+	{ path: "admin/contact", component: ContactComponent },
+	{ path: "admin/semester-application", component: SemesterApplicationComponent },
+	{ path: "admin/semester-supply-application", component: SupplySemesterApplicationComponent },
+	{ path: "admin/certificate-application", component: CertificateApplicationComponent },
+	{ path: "admin/revaluation-applications", component: RevaluationApplicationsComponent }
 ];
 
 @NgModule({
