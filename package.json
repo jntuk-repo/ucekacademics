@@ -5,6 +5,7 @@
   "main": "backend/index.js",
   "scripts": {
     "dev": "nodemon backend/index.js",
+    "build": "cd ./backend && npm i",
     "start": "node backend/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
