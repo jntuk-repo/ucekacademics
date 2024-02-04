@@ -13,59 +13,59 @@ export class SidebarComponent {
 	}
 
 	goToHome() {
-		this.router.navigateByUrl('/home')
+		this.router.navigateByUrl('/admin/home')
 	}
 
 	goToLogin() {
 		localStorage.clear()
-		this.router.navigateByUrl('/login')
+		this.router.navigateByUrl('/admin/login')
 	}
 
 	goToProfile() {
-		this.router.navigateByUrl('/profile')
+		this.router.navigateByUrl('/admin/profile')
 	}
 
 	goToContact() {
-		this.router.navigateByUrl('/contact')
+		this.router.navigateByUrl('/admin/contact')
 	}
 
 	goToNotifications() {
-		this.router.navigateByUrl('/upload-notifications')
+		this.router.navigateByUrl('/admin/upload-notifications')
 	}
 
 	goToDeleteNotifications() {
-		this.router.navigateByUrl('/delete-notifications')
+		this.router.navigateByUrl('/admin/delete-notifications')
 	}
 
 	goToUpdateRegulation() {
-		this.router.navigateByUrl('/update-regulation')
+		this.router.navigateByUrl('/admin/update-regulation')
 	}
 
 	goToUploadResults() {
-		this.router.navigateByUrl('/upload-results')
+		this.router.navigateByUrl('/admin/upload-results')
 	}
 
 	goToUploadSupplyResults() {
-		this.router.navigateByUrl('/upload-supplyresults')
+		this.router.navigateByUrl('/admin/upload-supplyresults')
 	}
 
 	goToUploadResultsCsv() {
-		this.router.navigateByUrl('/upload-results-csv')
+		this.router.navigateByUrl('/admin/upload-results-csv')
 	}
 
 	goToSemesterApplication() {
-		this.router.navigateByUrl('/semester-application')
+		this.router.navigateByUrl('/admin/semester-application')
 	}
 
 	goToSupplySemesterApplication() {
-		this.router.navigateByUrl('/semester-supply-application')
+		this.router.navigateByUrl('/admin/semester-supply-application')
 	}
 
 	goToRevaluationApplication() {
-		this.router.navigateByUrl('/revaluation-applications')
+		this.router.navigateByUrl('/admin/revaluation-applications')
 	}
 
 	goToSupplyCertificateApplication() {
-		this.router.navigateByUrl('/certificate-application')
+		this.router.navigateByUrl('/admin/certificate-application')
 	}
 }

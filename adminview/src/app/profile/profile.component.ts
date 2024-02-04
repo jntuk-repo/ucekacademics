@@ -25,7 +25,7 @@ export class ProfileComponent {
 	ngOnInit(): void {
 		this.email = localStorage.getItem("email") || ''
 		if (this.email == '') {
-			this.router.navigateByUrl('/login')
+			this.router.navigateByUrl('/admin/login')
 		}
 	}
 

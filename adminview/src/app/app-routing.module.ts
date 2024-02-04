@@ -16,7 +16,9 @@ import { CertificateApplicationComponent } from './certificate-application/certi
 import { RevaluationApplicationsComponent } from './revaluation-applications/revaluation-applications.component';
 
 const routes: Routes = [
+	{ path: "", redirectTo: "/admin/home", pathMatch: 'full' },
 	{ path: "admin", redirectTo: "/admin/home", pathMatch: 'full' },
+	{ path: "admin/", redirectTo: "/admin/home", pathMatch: 'full' },
 	{ path: "admin/home", component: HomeComponent },
 	{ path: "admin/login", component: LoginComponent },
 	{ path: "admin/profile", component: ProfileComponent },

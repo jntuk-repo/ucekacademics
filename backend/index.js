@@ -28,7 +28,7 @@ app.set('view engine', 'ejs')
 let count = 0
 
 app.get('/api', async (req, res) => {
-    res.status(200).json({"message": `server is working [ count: ${++count} ]`})
+    res.status(200).json({ "message": `server is working [ count: ${++count} ]` })
 })
 
 app.use('/api/student', student)
@@ -41,14 +41,13 @@ app.use('/api/upload', fileUpload)
 
 const __dirname = path.resolve()
 
-// app.use(express.static(path.join(__dirname, "/adminview/dist/my-projewt")))
-// app.get("/admin/*", (req, res) =>
-//     res.sendFile(path.join(__dirname, "/adminview/dist/my-projewt/index.html"))
-// )
+app.use(express.static(path.join(__dirname, "/static/site")))
+app.get("/admin/*", (req, res) =>
+    res.sendFile(path.join(__dirname, "/static/site/index-admin.html"))
+)
 
-app.use(express.static(path.join(__dirname, "/studentview/dist/my-projext")))
-app.get("*", (req, res) =>
-    res.sendFile(path.join(__dirname, "/studentview/dist/my-projext/index.html"))
+app.get("/*", (req, res) =>
+    res.sendFile(path.join(__dirname, "/static/site/index-student.html"))
 )
 
 mongoose.connect(MONGO)

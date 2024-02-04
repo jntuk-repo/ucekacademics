@@ -21,7 +21,7 @@ export class LoginComponent {
 			}
 			localStorage.setItem('email', data.email)
 			localStorage.setItem('role', data.role)
-			this.router.navigateByUrl('/home')
+			this.router.navigateByUrl('/admin/home')
 		})
 	}
 }

@@ -20,19 +20,19 @@ export class HeaderComponent {
 	ngOnInit(): void {
 		this.email = localStorage.getItem("email")
 		if (!this.email) {
-			this.router.navigateByUrl('/login')
+			this.router.navigateByUrl('/admin/login')
 		}
 	}
 
 	goToHome() {
-		this.router.navigateByUrl('/home')
+		this.router.navigateByUrl('/admin/home')
 	}
 	goToProfile() {
-		this.router.navigateByUrl('/profile')
+		this.router.navigateByUrl('/admin/profile')
 	}
 	logout() {
 		localStorage.clear()
-		this.router.navigateByUrl('/login')
+		this.router.navigateByUrl('/admin/login')
 	}
 
 }

@@ -30,7 +30,7 @@ export class HomeComponent {
 	ngOnInit(): void {
 		this.email = localStorage.getItem("email")
 		if (!this.email) {
-			this.router.navigateByUrl('/login')
+			this.router.navigateByUrl('/admin/login')
 			return
 		}
 		this.getNotifications()
@@ -44,15 +44,15 @@ export class HomeComponent {
 	}
 
 	goToHome() {
-		this.router.navigateByUrl('/home')
+		this.router.navigateByUrl('/admin/home')
 	}
 
 	goToNotifications() {
-		this.router.navigateByUrl('/upload-notifications')
+		this.router.navigateByUrl('/admin/upload-notifications')
 	}
 
 	goToProfile() {
-		this.router.navigateByUrl('/profile')
+		this.router.navigateByUrl('/admin/profile')
 	}
 
 }
